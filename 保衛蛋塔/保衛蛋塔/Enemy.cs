@@ -47,6 +47,7 @@ namespace 保衛蛋塔
             bi3.EndInit();
             img.Source = bi3;
             img.Stretch = Stretch.Uniform;
+            
 
         }
 
