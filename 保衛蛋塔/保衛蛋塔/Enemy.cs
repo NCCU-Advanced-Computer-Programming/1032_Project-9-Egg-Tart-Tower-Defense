@@ -48,7 +48,7 @@ namespace 保衛蛋塔
             img.Source = bi3;
             img.Stretch = Stretch.Uniform;
             
-
+            sp.Children.Add(img);
         }
 
     }
