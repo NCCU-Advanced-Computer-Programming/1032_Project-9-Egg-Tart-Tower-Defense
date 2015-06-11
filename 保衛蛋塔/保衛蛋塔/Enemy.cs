@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace 保衛蛋塔
 {
@@ -23,6 +25,7 @@ namespace 保衛蛋塔
             this.speed = speed;
             this.damage = damage;
             this.hungry = true;
+            img = new Image();
         }
 
         public void move() 
@@ -34,6 +37,18 @@ namespace 保衛蛋塔
             }
         }
 
+        public void Show(int height, int width, string imageSource)
+        {
+            img.Margin = new System.Windows.Thickness(0, 0, 1058 - width, 20);
+
+            BitmapImage bi3 = new BitmapImage();
+            bi3.BeginInit();
+            bi3.UriSource = new Uri(imageSource, UriKind.Relative);
+            bi3.EndInit();
+            img.Source = bi3;
+            img.Stretch = Stretch.Uniform;
+
+        }
 
     }
 }
