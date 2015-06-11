@@ -5,7 +5,7 @@
         Title="Window2" Height="600" Width="1200">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Images/cover.jpg"/>
+            <ImageBrush ImageSource="Images/long cover.jpg"/>
         </Grid.Background>
     </Grid>
 
