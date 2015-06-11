@@ -29,5 +29,6 @@ namespace 保衛蛋塔
         {
             new Window1().ShowDialog();
         }
+
     }
 }
