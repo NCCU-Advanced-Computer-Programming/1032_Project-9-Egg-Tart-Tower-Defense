@@ -30,5 +30,11 @@ namespace 保衛蛋塔
             new Window1().ShowDialog();
         }
 
+        private void Food1Btn_Click(object sender, RoutedEventArgs e)
+        {
+            Enemy qqq = new Enemy(100, 1, 2);
+            qqq.Show(80,60,"enemy.png");
+        }
+
     }
 }

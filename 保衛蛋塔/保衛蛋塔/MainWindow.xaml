@@ -5,7 +5,7 @@
     <Image HorizontalAlignment="Left" Height="382" Margin="0,30,0,0" VerticalAlignment="Top" Width="1194"/>
     <Rectangle Fill="#FF1B1B80" HorizontalAlignment="Left" Height="160" Margin="0,412,0,0" Stroke="Black" VerticalAlignment="Top" Width="1194"/>
     <StackPanel HorizontalAlignment="Left" Height="100" Margin="250,440,0,0" VerticalAlignment="Top" Width="700" Orientation="Horizontal" >
-        <Button x:Name="Food1Btn" Content="Food 1" Width="100"/>
+        <Button x:Name="Food1Btn" Content="Food 1" Width="100" Click="Food1Btn_Click"/>
         <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
         <Button x:Name="Food2Btn" Content="Food 2" Width="100"/>
         <Border BorderBrush="Black" BorderThickness="0" Width="20"/>

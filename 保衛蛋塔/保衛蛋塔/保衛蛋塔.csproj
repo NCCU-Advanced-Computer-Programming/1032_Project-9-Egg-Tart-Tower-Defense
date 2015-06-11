@@ -113,6 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\cover.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
