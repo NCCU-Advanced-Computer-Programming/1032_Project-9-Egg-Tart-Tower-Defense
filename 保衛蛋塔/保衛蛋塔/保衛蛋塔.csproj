@@ -113,7 +113,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="enemy.png" />
+    <Resource Include="Images\enemy.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\cover.jpg" />
