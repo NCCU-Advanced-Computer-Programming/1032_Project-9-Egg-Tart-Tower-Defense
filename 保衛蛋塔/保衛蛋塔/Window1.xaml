@@ -1,0 +1,31 @@
+﻿<Window x:Class="保衛蛋塔.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="升級" Height="400" Width="500">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="300" Margin="70,30,0,0" VerticalAlignment="Top" Width="150">
+            <Label Content="蛋塔等級 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content="金錢獲得 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content="修復蛋塔 (Lv.0 -&gt; Lv.1)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content=" 立即完全修復" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content="Food 1 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="300" Margin="290,30,0,0" VerticalAlignment="Top" Width="150">
+            <Label Content="Food 2 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content="Food 3 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content="Food 4 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content="Food 5 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+            <Label Content="Food 6 (Lv.1 -&gt; Lv.2)" Height="30"/>
+            <Button Content="$ 100" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Window>
