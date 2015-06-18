@@ -10,43 +10,22 @@ using System.Windows.Media.Imaging;
 
 namespace 保衛蛋塔
 {
-    class Enemy
+    class Food
     {
-        private int hp;
-        private double speed;
-        private int damage;
-        private bool hungry;
+        public int damage;
         public Image img;
         public StackPanel spImg;
-        public double position;
 
-        public Enemy(int hp, double speed, int damage)
+        public Food(int damage) 
         {
-            this.hp = hp;
-            this.speed = speed;
             this.damage = damage;
-            this.hungry = true;
-            this.position = 0;
             img = new Image();
             spImg = new StackPanel();
         }
 
-        public void Move() 
-        {
-            if (hungry)
-            {
-                position += speed;
-                spImg.Margin = new System.Windows.Thickness(0, 0, position, 20);
-            }
-            else
-            {
-                spImg.Children.Remove(img);
-            }
-        }
-
         public StackPanel Show(int height, int width, string imageSource)
         {
-            spImg.Margin = new System.Windows.Thickness(0, 0, 0, 20);
+            spImg.Margin = new System.Windows.Thickness(0, 0, 750, 20);
             spImg.Width = width * 1.1;
             spImg.VerticalAlignment = VerticalAlignment.Bottom;
             spImg.HorizontalAlignment = HorizontalAlignment.Right;
@@ -64,14 +43,6 @@ namespace 保衛蛋塔
             return spImg;
         }
 
-        public void Hurt(List<Food> foodtray) 
-        {
-            
-        }
 
-        public double getPosition()
-        {
-            return position;
-        }
     }
 }
