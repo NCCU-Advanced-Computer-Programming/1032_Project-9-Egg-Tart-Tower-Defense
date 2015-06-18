@@ -18,7 +18,7 @@ namespace 保衛蛋塔
         private bool hungry;
         public Image img;
         public StackPanel spImg;
-        private double position;
+        public double position;
 
         public Enemy(int hp, double speed, int damage)
         {
@@ -33,10 +33,14 @@ namespace 保衛蛋塔
 
         public void Move() 
         {
-            if (hungry) 
+            if (hungry)
             {
-                position = position + speed;
-                spImg.Width += 10;
+                position += speed;
+                spImg.Margin = new System.Windows.Thickness(0, 0, position, 20);
+            }
+            else
+            {
+                spImg.Children.Remove(img);
             }
         }
 
@@ -60,5 +64,9 @@ namespace 保衛蛋塔
             return spImg;
         }
 
+        public double getPosition()
+        {
+            return position;
+        }
     }
 }

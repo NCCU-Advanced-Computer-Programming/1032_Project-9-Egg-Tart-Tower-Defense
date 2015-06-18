@@ -59,12 +59,24 @@ namespace 保衛蛋塔
             img.Source = bi3;
             img.Height = height;
             img.Width = width;
-            
+
             img.Stretch = Stretch.Uniform;
             spImg.Children.Add(img);
 
             return spImg;
         }
+        int getcoodX(){
+            return coodX;
+        }
+        int gethp()
+        {
+            return hp;
+        }
+        void getHurt(int damage)
+        {
+            hp = hp - damage;
+        }
+        
 
     }
 }

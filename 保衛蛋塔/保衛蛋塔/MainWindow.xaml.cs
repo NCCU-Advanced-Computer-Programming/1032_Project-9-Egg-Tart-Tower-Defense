@@ -50,7 +50,11 @@ namespace 保衛蛋塔
         private void timer_Tick(object sender, EventArgs e)
         {
             ai.UnitHandler();
-            
+            time += 1;
+            if (time % 50 == 0)
+            {
+                ai.AddUnit(EnemyGrid);
+            }
         }
 
         private void UpgradeBtn_Click(object sender, RoutedEventArgs e)
@@ -60,7 +64,8 @@ namespace 保衛蛋塔
 
         private void Food1Btn_Click(object sender, RoutedEventArgs e)
         {
-            ai.AddUnit(EnemyGrid);
+            Food cake= new Food(10);
+            EnemyGrid.Children.Add(cake.Show(200, 200, "/Images/cake.png"));
         }
 
     }
