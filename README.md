@@ -1,7 +1,6 @@
 # Egg Tart Tower Defense
 
-PROJECT NAME:
-Egg Tart Tower Defense Game
+PROJECT NAME : Egg Tart Tower Defense Game
 
 
 TEAM MEMBER:
