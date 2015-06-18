@@ -1,12 +1,10 @@
 # Egg Tart Tower Defense
 
 PROJECT NAME:
-
 Egg Tart Tower Defense Game
 
 
-TEAM MEMBER :
-
+TEAM MEMBER:
 許文凱
 
 陳怡潔
