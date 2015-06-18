@@ -18,7 +18,7 @@ namespace 保衛蛋塔
 
         public void AddUnit(Panel EnemyGrid)
         {
-            enemyList.Add(new Enemy(100, 100, 1));
+            enemyList.Add(new Enemy(200, 200, 1));
             EnemyGrid.Children.Add(enemyList[enemyList.Count-1].Show(200, 200, "/Images/enemy.png"));
         }
 
