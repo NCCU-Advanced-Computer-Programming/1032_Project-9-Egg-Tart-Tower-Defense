@@ -30,7 +30,7 @@ namespace 保衛蛋塔
             spImg = new StackPanel();
         }
 
-        public void move() 
+        public void Move() 
         {
             if (hungry) 
             {
