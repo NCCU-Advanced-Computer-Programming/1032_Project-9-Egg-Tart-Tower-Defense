@@ -20,7 +20,7 @@
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
             <Button x:Name="Food6Btn" Content="Food 6" Width="100"/>
         </StackPanel>
-        <Image HorizontalAlignment="Left" Height="230" Margin="63,151,0,0" VerticalAlignment="Top" Width="165" Source="Images/tower.png"/>
+        <Image x:Name="tower" HorizontalAlignment="Left" Height="230" Margin="63,151,0,0" VerticalAlignment="Top" Width="165" Source="Images/tower.png"/>
         <Label x:Name="money" Content="$ 100" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="49" Width="134" FontSize="30"/>
         <Button x:Name="UpgradeBtn" Content="Upgrade" HorizontalAlignment="Left" Margin="42,440,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="UpgradeBtn_Click"/>
         <Menu Height="30" VerticalAlignment="Top"/>
