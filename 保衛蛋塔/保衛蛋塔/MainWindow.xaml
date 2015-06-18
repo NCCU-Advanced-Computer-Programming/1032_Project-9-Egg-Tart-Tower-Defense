@@ -1,30 +1,32 @@
-﻿ <Window x:Class="保衛蛋塔.MainWindow"
+﻿<Window x:Class="保衛蛋塔.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="600" Width="1200" ResizeMode="NoResize"><Grid>
+        Title="MainWindow" Height="600" Width="1200" ResizeMode="NoResize">
+    <Grid>
         <StackPanel Name="sp">
         </StackPanel>
         <Image HorizontalAlignment="Left" Height="382" Margin="0,30,0,0" VerticalAlignment="Top" Width="1194"/>
-    <Rectangle Fill="#FF1B1B80" HorizontalAlignment="Left" Height="160" Margin="0,412,0,0" Stroke="Black" VerticalAlignment="Top" Width="1194"/>
-    <StackPanel HorizontalAlignment="Left" Height="100" Margin="250,440,0,0" VerticalAlignment="Top" Width="700" Orientation="Horizontal" >
-        <Button x:Name="Food1Btn" Content="Food 1" Width="100" Click="Food1Btn_Click"/>
-        <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-        <Button x:Name="Food2Btn" Content="Food 2" Width="100"/>
-        <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-        <Button x:Name="Food3Btn" Content="Food 3" Width="100"/>
-        <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-        <Button x:Name="Food4Btn" Content="Food 4" Width="100"/>
-        <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-        <Button x:Name="Food5Btn" Content="Food 5" Width="100"/>
-        <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-        <Button x:Name="Food6Btn" Content="Food 6" Width="100"/>
-    </StackPanel>
-    <Image HorizontalAlignment="Left" Height="255" Margin="63,126,0,0" VerticalAlignment="Top" Width="165"/>
-    <Label Content="$ 100" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="49" Width="134" FontSize="30"/>
-    <Button x:Name="UpgradeBtn" Content="Upgrade" HorizontalAlignment="Left" Margin="42,440,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="UpgradeBtn_Click"/>
-    <Menu Height="30" VerticalAlignment="Top"/>
-    <Button HorizontalAlignment="Left" Margin="1078,465,0,0" VerticalAlignment="Top" Width="50" Height="50" Content="Pause"/>
-    <ProgressBar x:Name="TowerHP" HorizontalAlignment="Left" Height="20" Margin="63,101,0,0" VerticalAlignment="Top" Width="165" Value="50"/>
-    <Label Content="HP: 50%" HorizontalAlignment="Center" Margin="239,98,884,440" VerticalAlignment="Center" Height="34" Width="71" FontSize="15"/>
-</Grid>
+        <Rectangle Fill="#FF1B1B80" HorizontalAlignment="Left" Height="160" Margin="0,412,0,0" Stroke="Black" VerticalAlignment="Top" Width="1194"/>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="250,440,0,0" VerticalAlignment="Top" Width="700" Orientation="Horizontal" >
+            <Button x:Name="Food1Btn" Content="Food 1" Width="100" Click="Food1Btn_Click"/>
+            <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
+            <Button x:Name="Food2Btn" Content="Food 2" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
+            <Button x:Name="Food3Btn" Content="Food 3" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
+            <Button x:Name="Food4Btn" Content="Food 4" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
+            <Button x:Name="Food5Btn" Content="Food 5" Width="100"/>
+            <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
+            <Button x:Name="Food6Btn" Content="Food 6" Width="100"/>
+        </StackPanel>
+        <Image HorizontalAlignment="Left" Height="255" Margin="63,126,0,0" VerticalAlignment="Top" Width="165"/>
+        <Label Content="$ 100" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="49" Width="134" FontSize="30"/>
+        <Button x:Name="UpgradeBtn" Content="Upgrade" HorizontalAlignment="Left" Margin="42,440,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="UpgradeBtn_Click"/>
+        <Menu Height="30" VerticalAlignment="Top"/>
+        <Button HorizontalAlignment="Left" Margin="1078,465,0,0" VerticalAlignment="Top" Width="50" Height="50" Content="Pause"/>
+        <ProgressBar x:Name="TowerHP" HorizontalAlignment="Left" Height="20" Margin="63,101,0,0" VerticalAlignment="Top" Width="165" Value="50"/>
+        <Label Content="HP: 50%" HorizontalAlignment="Center" Margin="239,98,884,440" VerticalAlignment="Center" Height="34" Width="71" FontSize="15"/>
+        <Grid x:Name="EnemyGrid" HorizontalAlignment="Left" Height="191" Margin="324,190,0,0" VerticalAlignment="Top" Width="828"/>
+    </Grid>
 </Window>
