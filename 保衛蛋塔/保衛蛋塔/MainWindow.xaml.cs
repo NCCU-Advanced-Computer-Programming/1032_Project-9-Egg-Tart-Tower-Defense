@@ -58,7 +58,8 @@ namespace 保衛蛋塔
 
         private void Food1Btn_Click(object sender, RoutedEventArgs e)
         {
-            
+            Food cake= new Food(10);
+            EnemyGrid.Children.Add(cake.Show(200, 200, "/Images/cake.png"));
         }
 
     }

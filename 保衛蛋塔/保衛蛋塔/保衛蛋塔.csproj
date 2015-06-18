@@ -58,6 +58,7 @@
     </ApplicationDefinition>
     <Compile Include="AI.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="Food.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
