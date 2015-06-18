@@ -23,6 +23,12 @@ namespace 保衛蛋塔
         public MainWindow()
         {
             InitializeComponent();
+            AI ai = new AI();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            ai.UnitHandler();
         }
 
         private void UpgradeBtn_Click(object sender, RoutedEventArgs e)
