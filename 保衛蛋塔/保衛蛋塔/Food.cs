@@ -12,13 +12,13 @@ namespace 保衛蛋塔
 {
     class Food
     {
-        public int damage;
+        public int type;
         public Image img;
         public StackPanel spImg;
 
-        public Food(int damage) 
+        public Food(int type) 
         {
-            this.damage = damage;
+            this.type = type;
             img = new Image();
             spImg = new StackPanel();
         }

@@ -12,17 +12,17 @@ namespace 保衛蛋塔
 {
     class Enemy
     {
-        private int hp;
+        public int need;
         private double speed;
         private int damage;
-        private bool hungry;
+        public bool hungry;
         public Image img;
         public StackPanel spImg;
         public double position;
 
-        public Enemy(int hp, double speed, int damage)
+        public Enemy(int need, double speed, int damage)
         {
-            this.hp = hp;
+            this.need = need;
             this.speed = speed;
             this.damage = damage;
             this.hungry = true;
@@ -64,14 +64,6 @@ namespace 保衛蛋塔
             return spImg;
         }
 
-        public void Hurt(List<Food> foodtray) 
-        {
-            
-        }
-
-        public double getPosition()
-        {
-            return position;
-        }
+    
     }
 }

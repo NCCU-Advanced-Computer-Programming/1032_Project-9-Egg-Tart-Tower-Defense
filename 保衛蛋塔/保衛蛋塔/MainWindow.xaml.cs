@@ -25,7 +25,7 @@ namespace 保衛蛋塔
         int _timeInterval;
         int time = 0;
         AI ai;
-        
+        List<Food> foodtray = new List<Food>();
         
         
         public MainWindow()
@@ -43,7 +43,7 @@ namespace 保衛蛋塔
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            ai.UnitHandler();
+            ai.UnitHandler(foodtray,EnemyGrid);
             time += 1;
             if (time % 50 == 0)
             {
@@ -58,8 +58,10 @@ namespace 保衛蛋塔
 
         private void Food1Btn_Click(object sender, RoutedEventArgs e)
         {
-            Food cake= new Food(10);
+            Food cake= new Food(1);
+            foodtray.Add(cake);
             EnemyGrid.Children.Add(cake.Show(200, 200, "/Images/cake.png"));
+            
         }
 
     }
