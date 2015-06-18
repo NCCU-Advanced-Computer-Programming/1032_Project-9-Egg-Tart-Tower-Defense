@@ -27,6 +27,6 @@
         <Button HorizontalAlignment="Left" Margin="1078,465,0,0" VerticalAlignment="Top" Width="50" Height="50" Content="Pause"/>
         <ProgressBar x:Name="TowerHP" HorizontalAlignment="Left" Height="20" Margin="63,101,0,0" VerticalAlignment="Top" Width="165" Value="50"/>
         <Label Content="HP: 50%" HorizontalAlignment="Center" Margin="239,98,884,440" VerticalAlignment="Center" Height="34" Width="71" FontSize="15"/>
-        <Grid x:Name="EnemyGrid" HorizontalAlignment="Left" Height="191" Margin="186,190,0,0" VerticalAlignment="Top" Width="1008"/>
+        <Grid x:Name="EnemyGrid" HorizontalAlignment="Left" Height="230" Margin="186,151,0,0" VerticalAlignment="Top" Width="1008"/>
     </Grid>
 </Window>
