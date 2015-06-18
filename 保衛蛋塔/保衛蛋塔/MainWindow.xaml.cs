@@ -24,6 +24,8 @@ namespace 保衛蛋塔
         DispatcherTimer timer;
         int _timeInterval;
         int time = 0;
+        Image tower;
+        
         AI ai;
         List<Food> foodtray = new List<Food>();
         
@@ -33,12 +35,16 @@ namespace 保衛蛋塔
             InitializeComponent();
            
             ai = new AI();
+            
+
             _timeInterval = 25;
             time = 0;
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMilliseconds(_timeInterval);
             timer.Tick += timer_Tick;
             timer.Start();
+
+            
         }
 
         private void timer_Tick(object sender, EventArgs e)
