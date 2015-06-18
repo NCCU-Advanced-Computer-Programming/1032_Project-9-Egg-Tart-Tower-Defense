@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AI.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
@@ -131,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\enemy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tower.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

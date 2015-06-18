@@ -17,6 +17,7 @@ namespace 保衛蛋塔
         private int damage;
         private bool hungry;
         public Image img;
+        public StackPanel spImg;
         private double position;
 
         public Enemy(int hp, double speed, int damage)
@@ -26,9 +27,10 @@ namespace 保衛蛋塔
             this.damage = damage;
             this.hungry = true;
             img = new Image();
+            spImg = new StackPanel();
         }
 
-        public void move() 
+        public void Move() 
         {
             if (hungry) 
             {
@@ -37,18 +39,24 @@ namespace 保衛蛋塔
             }
         }
 
-        public void Show(int height, int width, string imageSource)
+        public StackPanel Show(int height, int width, string imageSource)
         {
-            img.Margin = new System.Windows.Thickness(0, 0, 1058 - width, 20);
+            spImg.Margin = new System.Windows.Thickness(0, 0, 0, 20);
+            spImg.Width = width * 1.1;
+            spImg.VerticalAlignment = VerticalAlignment.Bottom;
+            spImg.HorizontalAlignment = HorizontalAlignment.Right;
 
             BitmapImage bi3 = new BitmapImage();
             bi3.BeginInit();
             bi3.UriSource = new Uri(imageSource, UriKind.Relative);
             bi3.EndInit();
             img.Source = bi3;
+            img.Height = height;
+            img.Width = width;
             img.Stretch = Stretch.Uniform;
-            
-            sp.Children.Add(img);
+            spImg.Children.Add(img);
+
+            return spImg;
         }
 
     }
