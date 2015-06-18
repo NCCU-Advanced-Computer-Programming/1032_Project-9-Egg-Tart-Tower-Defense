@@ -26,6 +26,7 @@ namespace 保衛蛋塔
             this.speed = speed;
             this.damage = damage;
             this.hungry = true;
+            this.position = 0;
             img = new Image();
             spImg = new StackPanel();
         }
@@ -34,8 +35,8 @@ namespace 保衛蛋塔
         {
             if (hungry) 
             {
-                img.Margin = new Thickness(img.Margin.Left - speed, img.Margin.Top, img.Margin.Right + speed, img.Margin.Bottom);
-                position = img.Margin.Right + img.Width; 
+                position = position + speed;
+                spImg.Width += 10;
             }
         }
 

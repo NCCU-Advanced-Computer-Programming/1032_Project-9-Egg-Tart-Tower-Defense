@@ -114,9 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\enemy.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\cover.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -134,7 +131,7 @@
     <Resource Include="Images\back.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\enemy2.png" />
+    <Resource Include="Images\enemy.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\tower.png" />

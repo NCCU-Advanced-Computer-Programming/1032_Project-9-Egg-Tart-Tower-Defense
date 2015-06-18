@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace 保衛蛋塔
 {
@@ -20,15 +21,30 @@ namespace 保衛蛋塔
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer;
+        int _timeInterval;
+        int time = 0;
+        AI ai;
+        
+        
+        
         public MainWindow()
         {
             InitializeComponent();
-            AI ai = new AI();
+           
+            ai = new AI();
+            _timeInterval = 25;
+            time = 0;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(_timeInterval);
+            timer.Tick += timer_Tick;
+            timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             ai.UnitHandler();
+            
         }
 
         private void UpgradeBtn_Click(object sender, RoutedEventArgs e)
@@ -38,9 +54,7 @@ namespace 保衛蛋塔
 
         private void Food1Btn_Click(object sender, RoutedEventArgs e)
         {
-            Enemy qqq = new Enemy(100, 1, 1);
-            var img = qqq.Show(200, 200, "/Images/enemy.png");
-            EnemyGrid.Children.Add(img);
+            ai.AddUnit(EnemyGrid);
         }
 
     }
