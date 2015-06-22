@@ -13,8 +13,8 @@ namespace 保衛蛋塔
     class Enemy
     {
         public int need;
-        private double speed;
-        private int damage;
+        public double speed;
+        public int damage;
         public bool hungry;
         public Image img;
         public StackPanel spImg;
@@ -64,6 +64,19 @@ namespace 保衛蛋塔
             return spImg;
         }
 
-    
+        public void kill(Grid g)
+        {
+            if (g != null)
+                g.Children.Remove(this.LifeCheck());
+            need = 0;
+
+        }
+        public virtual StackPanel LifeCheck()
+        {
+            //C#使用記憶體自動回收
+            spImg.Visibility = Visibility.Hidden;
+
+            return spImg;
+        }
     }
 }

@@ -43,6 +43,19 @@ namespace 保衛蛋塔
             return spImg;
         }
 
+        public void kill(Grid g)
+        {
+            if (g != null)
+                g.Children.Remove(this.LifeCheck());
+            type = 0;
 
+        }
+        public virtual StackPanel LifeCheck()
+        {
+            //C#使用記憶體自動回收
+            spImg.Visibility = Visibility.Hidden;
+
+            return spImg;
+        }
     }
 }

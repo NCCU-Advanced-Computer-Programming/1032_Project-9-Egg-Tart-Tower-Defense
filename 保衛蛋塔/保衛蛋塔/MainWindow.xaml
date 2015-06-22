@@ -10,9 +10,9 @@
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="250,440,0,0" VerticalAlignment="Top" Width="700" Orientation="Horizontal" >
             <Button x:Name="Food1Btn" Content="Food 1" Width="100" Click="Food1Btn_Click"/>
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-            <Button x:Name="Food2Btn" Content="Food 2" Width="100"/>
+            <Button x:Name="Food2Btn" Content="Food 2" Width="100" Click="Food2Btn_Click"/>
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-            <Button x:Name="Food3Btn" Content="Food 3" Width="100"/>
+            <Button x:Name="Food3Btn" Content="Food 3" Width="100" Click="Food3Btn_Click"/>
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
             <Button x:Name="Food4Btn" Content="Food 4" Width="100"/>
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
@@ -20,12 +20,10 @@
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
             <Button x:Name="Food6Btn" Content="Food 6" Width="100"/>
         </StackPanel>
-        <Image x:Name="tower" HorizontalAlignment="Left" Height="230" Margin="63,151,0,0" VerticalAlignment="Top" Width="165" Source="Images/tower.png"/>
-        <Label x:Name="money" Content="$ 100" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="49" Width="134" FontSize="30"/>
-        <Button x:Name="UpgradeBtn" Content="Upgrade" HorizontalAlignment="Left" Margin="42,440,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="UpgradeBtn_Click"/>
+        <Image HorizontalAlignment="Left" Height="230" Margin="63,151,0,0" VerticalAlignment="Top" Width="165" Source="Images/tower.png"/>
         <Menu Height="30" VerticalAlignment="Top"/>
         <Button HorizontalAlignment="Left" Margin="1078,465,0,0" VerticalAlignment="Top" Width="50" Height="50" Content="Pause"/>
-        <ProgressBar x:Name="TowerHP" HorizontalAlignment="Left" Height="20" Margin="63,101,0,0" VerticalAlignment="Top" Width="165" Value="50"/>
-        <Grid x:Name="EnemyGrid" HorizontalAlignment="Left" Height="191" Margin="186,190,0,0" VerticalAlignment="Top" Width="1008"/>
+        <ProgressBar x:Name="towerHP" HorizontalAlignment="Left" Height="20" Margin="63,101,0,0" VerticalAlignment="Top" Width="165" Value="100"/>
+        <Grid x:Name="grid" HorizontalAlignment="Left" Height="191" Margin="186,190,0,0" VerticalAlignment="Top" Width="1008"/>
     </Grid>
 </Window>

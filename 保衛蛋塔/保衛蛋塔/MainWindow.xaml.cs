@@ -24,9 +24,9 @@ namespace 保衛蛋塔
         DispatcherTimer timer;
         int _timeInterval;
         int time = 0;
-        Image tower;
+     
         
-        AI ai;
+        GameController gc;
         List<Food> foodtray = new List<Food>();
         
         
@@ -34,7 +34,7 @@ namespace 保衛蛋塔
         {
             InitializeComponent();
            
-            ai = new AI();
+            gc = new GameController();
             
 
             _timeInterval = 25;
@@ -49,11 +49,11 @@ namespace 保衛蛋塔
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            ai.UnitHandler(foodtray,EnemyGrid);
+            gc.UnitHandler(grid,towerHP);
             time += 1;
             if (time % 50 == 0)
             {
-                ai.AddUnit(EnemyGrid);
+                gc.AddUnit(grid);
             }
         }
 
@@ -64,10 +64,17 @@ namespace 保衛蛋塔
 
         private void Food1Btn_Click(object sender, RoutedEventArgs e)
         {
-            Food cake= new Food(1);
-            foodtray.Add(cake);
-            EnemyGrid.Children.Add(cake.Show(200, 200, "/Images/cake.png"));
-            
+            gc.AddFood(1,grid);           
+        }
+
+        private void Food2Btn_Click(object sender, RoutedEventArgs e)
+        {
+            gc.AddFood(2, grid);
+        }
+
+        private void Food3Btn_Click(object sender, RoutedEventArgs e)
+        {
+            gc.AddFood(3, grid);
         }
 
     }
