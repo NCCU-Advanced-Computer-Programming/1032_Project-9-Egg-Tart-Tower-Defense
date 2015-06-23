@@ -77,5 +77,10 @@ namespace 保衛蛋塔
             gc.AddFood(3, grid);
         }
 
+        private void Food4Btn_Click(object sender, RoutedEventArgs e)
+        {
+            gc.AddFood(4, grid);
+        }
+
     }
 }

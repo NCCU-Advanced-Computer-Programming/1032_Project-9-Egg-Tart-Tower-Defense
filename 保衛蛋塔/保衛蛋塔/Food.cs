@@ -15,12 +15,34 @@ namespace 保衛蛋塔
         public int type;
         public Image img;
         public StackPanel spImg;
+        public string source;
 
         public Food(int type) 
         {
             this.type = type;
             img = new Image();
             spImg = new StackPanel();
+            switch (type)
+            {
+                case 1:
+                    source = "/Images/cake.png";
+                    break;
+                case 2:
+                    source = "/Images/donut.png";
+                    break;
+                case 3:
+                    source = "/Images/hamburger.png";
+                    break;
+                case 4:
+                    source = "/Images/lemonade.png";
+                    break;
+                case 5:
+                    source = "/Images/cake.png";
+                    break;
+                case 6:
+                    source = "/Images/cake.png";
+                    break;
+            }
         }
 
         public StackPanel Show(int height, int width, string imageSource)

@@ -11,7 +11,7 @@ namespace 保衛蛋塔
     {
         public List<Enemy> enemyList;
         public List<Food> foodList;
-        string source;
+        private int type;
 
         public GameController()
         {
@@ -21,20 +21,15 @@ namespace 保衛蛋塔
 
         public void AddUnit(Grid grid)
         {
-            enemyList.Add(new Enemy(1, 10, 10));
+            type = 1;
+            enemyList.Add(new Enemy(type, 10));
             grid.Children.Add(enemyList[enemyList.Count - 1].Show(200, 200, "/Images/enemy.png"));
         }
 
         public void AddFood(int type, Grid grid)
         {
-            foodList.Add(new Food(type));
-            switch (type) 
-            {
-                case 1:
-                    source = "/Images/cake.png";
-                    break;
-            }
-            grid.Children.Add(foodList[foodList.Count - 1].Show(200, 200, source));
+            foodList.Add(new Food(type));      
+            grid.Children.Add(foodList[foodList.Count - 1].Show(200, 200, foodList[foodList.Count - 1].source));
         }
 
         public void UnitHandler(Grid grid, ProgressBar towerHP)
@@ -48,14 +43,14 @@ namespace 保衛蛋塔
                          {
                             for (int j = 0; j < foodList.Count; j++) 
                              {
-                                 if (enemyList[i].need == foodList[j].type)
+                                 if (enemyList[i].type == foodList[j].type)
                                  {
                                      enemyList[i].kill(grid);
                                      foodList[j].kill(grid);
                                  }
                                }          
                          }
-                    if (enemyList[i].position == 800 && enemyList[i].need != 0)
+                    if (enemyList[i].position == 900 && enemyList[i].type != 0)
                     {
                         towerHP.Value -= enemyList[i].damage;
                         enemyList[i].kill(grid);

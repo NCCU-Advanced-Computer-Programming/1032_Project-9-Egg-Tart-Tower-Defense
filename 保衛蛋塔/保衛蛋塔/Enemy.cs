@@ -12,22 +12,23 @@ namespace 保衛蛋塔
 {
     class Enemy
     {
-        public int need;
+        public int type;
         public double speed;
         public int damage;
         public bool hungry;
-        public Image img;
+        private Image img;
+        private Label lb;
         public StackPanel spImg;
         public double position;
 
-        public Enemy(int need, double speed, int damage)
+        public Enemy(int type, int damage)
         {
-            this.need = need;
-            this.speed = speed;
+            this.type = type;
+            this.speed = 5;
             this.damage = damage;
             this.hungry = true;
             this.position = 0;
-            img = new Image();
+            img = new Image();     
             spImg = new StackPanel();
         }
 
@@ -59,6 +60,33 @@ namespace 保衛蛋塔
             img.Height = height;
             img.Width = width;
             img.Stretch = Stretch.Uniform;
+
+            lb = new Label();
+            switch (type)
+            {
+                case 1:
+                    lb.Content = "Cake";
+                    break;
+                case 2:
+                    lb.Content = "Donut";
+                    break;
+                case 3:
+                    lb.Content = "Hamburger";
+                    break;
+                case 4:
+                    lb.Content = "Lemonade";
+                    break;
+                case 5:
+                    lb.Content = "cake";
+                    break;
+                case 6:
+                    lb.Content = "cake";
+                    break;
+            }
+            lb.HorizontalAlignment = HorizontalAlignment.Center;
+            lb.FontSize = 20;
+
+            spImg.Children.Add(lb);
             spImg.Children.Add(img);
 
             return spImg;
@@ -68,7 +96,7 @@ namespace 保衛蛋塔
         {
             if (g != null)
                 g.Children.Remove(this.LifeCheck());
-            need = 0;
+            type = 0;
 
         }
         public virtual StackPanel LifeCheck()
