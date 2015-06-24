@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Help" Height="300" Width="400">
     <Grid>
-        <Button x:Name="button" Content="CREDIT" HorizontalAlignment="Left" Margin="302,220,0,0" VerticalAlignment="Top" Width="80" Height="40" Click="button_Click"/>
-        <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="202,220,0,10" Width="80" Click="ok_Click"/>
+        <Button x:Name="button" Content="CREDIT" HorizontalAlignment="Left" Margin="284,204,0,0" VerticalAlignment="Top" Width="80" Height="40" Click="button_Click"/>
+        <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="189,204,0,0" VerticalAlignment="Top" Width="80" Height="40" Click="ok_Click"/>
         <Label x:Name="label" Content="依照蟲蟲上方指定的食物名稱&#xD;&#xA;點選下方食物方框&#xD;&#xA;即可出現食物給蟲蟲食用並使其消失&#xD;&#xA;若為非指定食物&#xD;&#xA;則蟲蟲不會食用" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="189" Width="372" FontSize="21.333"/>
 
     </Grid>
