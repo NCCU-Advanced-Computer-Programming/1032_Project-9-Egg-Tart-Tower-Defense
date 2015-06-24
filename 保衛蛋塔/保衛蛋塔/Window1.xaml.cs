@@ -23,5 +23,15 @@ namespace 保衛蛋塔
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            new Window2().ShowDialog();
+        }
+
+        private void ok_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

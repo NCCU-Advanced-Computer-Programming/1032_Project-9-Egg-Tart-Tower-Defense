@@ -77,10 +77,10 @@ namespace 保衛蛋塔
                     lb.Content = "Lemonade";
                     break;
                 case 5:
-                    lb.Content = "cake";
+                    lb.Content = "Ice-Cream";
                     break;
                 case 6:
-                    lb.Content = "cake";
+                    lb.Content = "Chocolate";
                     break;
             }
             lb.HorizontalAlignment = HorizontalAlignment.Center;
@@ -97,13 +97,10 @@ namespace 保衛蛋塔
             if (g != null)
                 g.Children.Remove(this.LifeCheck());
             type = 0;
-
         }
         public virtual StackPanel LifeCheck()
         {
-            //C#使用記憶體自動回收
             spImg.Visibility = Visibility.Hidden;
-
             return spImg;
         }
     }

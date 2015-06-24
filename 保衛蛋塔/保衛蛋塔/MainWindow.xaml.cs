@@ -24,6 +24,9 @@ namespace 保衛蛋塔
         DispatcherTimer timer;
         int _timeInterval;
         int time = 0;
+        int spawn = 70;
+        bool game = false;
+        Random rd = new Random();
      
         
         GameController gc;
@@ -49,17 +52,18 @@ namespace 保衛蛋塔
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            gc.UnitHandler(grid,towerHP);
-            time += 1;
-            if (time % 50 == 0)
-            {
-                gc.AddUnit(grid);
+            if (game) {
+                gc.UnitHandler(grid, towerHP);
+                game = gc.Check(towerHP,gameover,restart);
+                scoreLB.Content = "Score: " + gc.score;
+                time += 1;
+                if (time % spawn == 0)
+                {
+                    gc.AddUnit(rd.Next(1,6),grid);
+                    spawn -= 1;
+                }
             }
-        }
-
-        private void UpgradeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            new Window1().ShowDialog();
+            
         }
 
         private void Food1Btn_Click(object sender, RoutedEventArgs e)
@@ -82,5 +86,51 @@ namespace 保衛蛋塔
             gc.AddFood(4, grid);
         }
 
+        private void Food5Btn_Click(object sender, RoutedEventArgs e)
+        {
+            gc.AddFood(5, grid);
+        }
+
+        private void Food6Btn_Click(object sender, RoutedEventArgs e)
+        {
+            gc.AddFood(6, grid);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (game)
+                pause.Content = "Resume";
+            else
+                pause.Content = "Pause";
+            game = !game;
+        }
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+            game = true;
+            cover.Visibility = Visibility.Hidden;
+            start.Visibility = Visibility.Hidden;
+            help.Visibility = Visibility.Hidden;
+        }
+
+        private void help_Click(object sender, RoutedEventArgs e)
+        {
+            new Window1().ShowDialog();
+        }
+
+        private void restart_Click(object sender, RoutedEventArgs e)
+        {
+            towerHP.Value = 100;
+            time = 0;
+            spawn = 70;
+            game = false;
+            gc = new GameController();
+            gameover.Visibility = Visibility.Hidden;
+            restart.Visibility = Visibility.Hidden;
+            cover.Visibility = Visibility.Visible;
+            start.Visibility = Visibility.Visible;
+            help.Visibility = Visibility.Visible;
+            grid.Children.RemoveRange(0,100);
+        }
     }
 }

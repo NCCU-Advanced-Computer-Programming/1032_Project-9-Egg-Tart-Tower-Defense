@@ -37,10 +37,10 @@ namespace 保衛蛋塔
                     source = "/Images/lemonade.png";
                     break;
                 case 5:
-                    source = "/Images/cake.png";
+                    source = "/Images/ice.png";
                     break;
                 case 6:
-                    source = "/Images/cake.png";
+                    source = "/Images/choco.png";
                     break;
             }
         }
@@ -74,7 +74,6 @@ namespace 保衛蛋塔
         }
         public virtual StackPanel LifeCheck()
         {
-            //C#使用記憶體自動回收
             spImg.Visibility = Visibility.Hidden;
 
             return spImg;

@@ -11,7 +11,7 @@ namespace 保衛蛋塔
     {
         public List<Enemy> enemyList;
         public List<Food> foodList;
-        private int type;
+        public int score = 0;
 
         public GameController()
         {
@@ -19,17 +19,16 @@ namespace 保衛蛋塔
             foodList = new List<Food>();
         }
 
-        public void AddUnit(Grid grid)
+        public void AddUnit(int type,Grid grid)
         {
-            type = 1;
-            enemyList.Add(new Enemy(type, 10));
+            enemyList.Add(new Enemy(type, 20));
             grid.Children.Add(enemyList[enemyList.Count - 1].Show(200, 200, "/Images/enemy.png"));
         }
 
         public void AddFood(int type, Grid grid)
         {
-            foodList.Add(new Food(type));      
-            grid.Children.Add(foodList[foodList.Count - 1].Show(200, 200, foodList[foodList.Count - 1].source));
+                foodList.Add(new Food(type));
+                grid.Children.Add(foodList[foodList.Count - 1].Show(200, 200, foodList[foodList.Count - 1].source));        
         }
 
         public void UnitHandler(Grid grid, ProgressBar towerHP)
@@ -47,7 +46,11 @@ namespace 保衛蛋塔
                                  {
                                      enemyList[i].kill(grid);
                                      foodList[j].kill(grid);
-                                 }
+                                      score += 10;    
+                                 }else
+                                    {
+                                         foodList[j].kill(grid);
+                                     }
                                }          
                          }
                     if (enemyList[i].position == 900 && enemyList[i].type != 0)
@@ -63,6 +66,19 @@ namespace 保衛蛋塔
                 
             }
             
+        }
+
+        public bool Check(ProgressBar towerHP,Label gameover,Button restart)
+        {
+            if(towerHP.Value == 0)
+            {
+                gameover.Visibility = System.Windows.Visibility.Visible;
+                restart.Visibility = System.Windows.Visibility.Visible;
+                return false;
+            }else
+            {
+                return true;
+            }
         }
     }
 }

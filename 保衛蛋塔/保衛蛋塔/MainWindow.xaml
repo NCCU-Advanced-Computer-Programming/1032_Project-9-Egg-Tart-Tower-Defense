@@ -1,7 +1,7 @@
 ﻿<Window x:Class="保衛蛋塔.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="600" Width="1200" ResizeMode="NoResize">
+        Title="保衛蛋塔" Height="600" Width="1200" ResizeMode="NoResize">
     <Grid>
         <StackPanel Name="sp">
         </StackPanel>
@@ -24,18 +24,24 @@
                 <Image Height="100" Width="100" Source="Images/lemonade.png"/>
             </Button>
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-            <Button x:Name="Food5Btn" Width="100">
-                <Image Height="100" Width="100"/>
+            <Button x:Name="Food5Btn" Width="100" Click="Food5Btn_Click">
+                <Image Height="100" Width="100" Source="Images/ice.png"/>
             </Button>
             <Border BorderBrush="Black" BorderThickness="0" Width="20"/>
-            <Button x:Name="Food6Btn" Width="100">
-                <Image Height="100" Width="100"/>
+            <Button x:Name="Food6Btn" Width="100" Click="Food6Btn_Click">
+                <Image Height="100" Width="100" Source="Images/choco.png"/>
             </Button>
         </StackPanel>
         <Image HorizontalAlignment="Left" Height="230" Margin="63,151,0,0" VerticalAlignment="Top" Width="165" Source="Images/tower.png"/>
         <Menu Height="30" VerticalAlignment="Top"/>
-        <Button HorizontalAlignment="Left" Margin="1078,465,0,0" VerticalAlignment="Top" Width="50" Height="50" Content="Pause"/>
+        <Button x:Name="pause" HorizontalAlignment="Left" Margin="1078,465,0,0" VerticalAlignment="Top" Width="50" Height="50" Content="Pause" Click="Button_Click"/>
         <ProgressBar x:Name="towerHP" HorizontalAlignment="Left" Height="20" Margin="63,101,0,0" VerticalAlignment="Top" Width="165" Value="100"/>
         <Grid x:Name="grid" HorizontalAlignment="Left" Height="316" Margin="186,85,0,0" VerticalAlignment="Top" Width="1008"/>
+        <Label x:Name="scoreLB" Content="Score: 0" HorizontalAlignment="Left" Margin="963,35,0,0" VerticalAlignment="Top" Height="44" Width="208" FontSize="26.667"/>
+        <Label x:Name="gameover" Content="GAME OVER!!!" HorizontalAlignment="Center" VerticalAlignment="Center" Height="572" Width="1194" FontSize="133.333" Background="#7FC11717" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Black" Visibility="Hidden"/>
+        <Image x:Name="cover" Source="Images/long cover.jpg" Stretch="Fill" />
+        <Button x:Name="start" Content="START" HorizontalAlignment="Left" Margin="1009,319,0,0" VerticalAlignment="Top" Width="119" Height="62" FontSize="26.667" Click="start_Click"/>
+        <Button x:Name="help" Content="HELP" HorizontalAlignment="Left" Margin="1009,406,0,0" VerticalAlignment="Top" Width="119" Height="62" FontSize="26.667" Click="help_Click"/>
+        <Button x:Name="restart" Content="RESTART" HorizontalAlignment="Left" Margin="485,406,0,0" VerticalAlignment="Top" Width="235" Height="75" FontSize="26.667" IsCancel="True" Click="restart_Click" Visibility="Hidden"/>
     </Grid>
 </Window>
